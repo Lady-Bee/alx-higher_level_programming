@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-def uppercase(str):
-    """Prints uppercase string
+def to_uper(character):
+    """Function converts a character to uppercase"""
+    if ord(character) >= 97 and ord(character) <= 122:
+        return (ord(character) - 32)
+    else:
+        return ord(character)
 
-    Args:
-        str: a character string argument
-    """
 
-    for letter in str:
-        ascii_letter_code = ord(letter)
-        if ascii_letter_code in range(97, 123):
-            ascii_letter_code = ascii_letter_code - 3
-        print("{:c}".format(ascii_letter_code), end="")
-    print()
+def uppercase(string):
+    """Function prints a string in uppercase"""
+    string_new = ""
+    for character in string:
+        string_new += "%c" % to_uper(character)
+    print("{:s}".format(string_new))
