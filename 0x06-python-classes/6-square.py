@@ -1,31 +1,19 @@
 #!/usr/bin/python3
-"""Square Class.
-
-This module contains a class that defines a square.
-
-Usage Example:
-
-    Square = __import__('6-square').Square
-
-    my_square = Square(3)
-    print(type(my_square))
-    print(my_square.__dict__)
-"""
+"""Defines a class Square."""
 
 
 class Square:
-    """Defines the blueprint of a square.
-
-    Attribute:
-        size (int): An integer representing the object size.
-        position (int, int): The position of the new square.
-    """
+    """Represents a square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """An object constructor method."""
-        self.__size = size
-        self.__position = position
+        """Initializes a new square.
 
+        Args:
+            size (int): The size of the new square.
+            position (int, int): The position of the new square.
+        """
+        self.size = size
+        self.position = position
     @property
     def size(self):
         """Gets the size private attribute value.
@@ -69,10 +57,10 @@ class Square:
             value: the value to be set
         """
         if (
-            not isinstance(value, tuple)
-            or len(value) != 2
-            or not all(isinstance(num, int) for num in value)
-            or not all(num >= 0 for num in value)
+            not isinstance(value, tuple) or
+            len(value) != 2 or
+            not all(isinstance(num, int) for num in value) or
+            not all(num >= 0 for num in value)
         ):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
@@ -83,7 +71,7 @@ class Square:
         Returns:
             The current square area
         """
-        return self.__size**2
+        return self.__size * self.__size
 
     def my_print(self):
         """Displays the square object with # character"""
