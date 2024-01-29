@@ -32,32 +32,8 @@ class Rectangle:
             height: An integer representing object height.
                   Has a default value of 0.
         """
-        self.__width = width
         self.__height = height
-
-    @property
-    def width(self):
-        """Gets the width private attribute value.
-
-        Returns:
-            The width private attribute
-        """
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """Sets the width private attribute value.
-
-        Validates the assignment of the width private attribute.
-
-        Arg:
-            value: the value to be set
-        """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = value
+        self.__width = width
 
     @property
     def height(self):
@@ -82,3 +58,27 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    @property
+    def width(self):
+        """Gets the width private attribute value.
+
+        Returns:
+            The width private attribute
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Sets the width private attribute value.
+
+        Validates the assignment of the width private attribute.
+
+        Arg:
+            value: the value to be set
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
