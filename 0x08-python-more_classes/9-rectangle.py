@@ -98,7 +98,7 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, value)::
+    def height(self, value):
         """Sets the height private attribute value.
 
         Validates the assignment of the height private attribute.
