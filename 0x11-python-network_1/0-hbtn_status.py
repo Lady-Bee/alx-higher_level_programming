@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Take in a URL, send request to URL and display value of `X-Request-Id`"""
+"""script fetches https://alx-intranet.hbtn.io/status"""
 
 if __name__ == '__main__':
     import urllib.request
